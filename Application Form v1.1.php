@@ -1,8 +1,8 @@
-<?php
-	if(!empty($_GET['email'])){
+<!-- <?php
+  $rowval['email'] = 'pranjale.ks@gmail.com';
+	echo "first this";
+?> -->
 
-		}
-?>
 
 <html>
 <head>
@@ -212,13 +212,19 @@ Application Form - SacredWalks Auto save email version
 
 	</script>
 
+	<script>
+	function adde() {
+		document.getElementsByName("email")[0].value="pranjale.ks@gmail.com";
+	}
+	</script>
+
 </head>
 <body>
 
 	<!-- content -->
 
 <div style="width: 100%; border: 0px; background-color: transparent">
-	<form id="registerform" action="savenEmail.php" method="post">
+	<form id="registerform" action="savenEmail.php" method="post"  onreset="adde()">
 	<div style="width: 60%; min-width: 840px; margin: 0 auto; border: 1px solid black; background-image: url('/images/home-content-bg.jpg');">
         <div style="height:30px">&nbsp;</div>
 		<h3 style="display: none; width: 600px; margin: 0 auto; color: red">Application form is temporarily out of service. Please check back shortly</h3>
@@ -846,9 +852,7 @@ Application Form - SacredWalks Auto save email version
 	</div>
 	<div class="boxgood required" id="emaildiv"
 		><label>Email: </label
-		><input type="text" class="inptext flexcol" name="email" value="<?php echo $_GET['email'] ?>"style="width: 367px"
-	></div
-></div>
+		><input type="text" class="inptext flexcol" name="email" onfocus="adde()" style="width: 367px"></div></div>
 <div class="oneline"
 	><div class="boxgood required"
 		><label>Mobile : </label
@@ -1747,9 +1751,10 @@ I CONFIRM THAT I HAVE READ AND UNDERSTOOD THIS AGREEMENT PRIOR TO SIGNING IT/THI
 <center>
 <span id="buttons" >
 	<!-- Added buttone save to save the form data (tyep is submit) form action triggered on click  -->
-	<input type="submit" value="Save"><span class="bigButtonLeft"></span><span id="buttonsubmit" class="Bigbutton-middle"></span><span class="bigButtonRight"></span></a>
+	<input type="submit" value="Save" ><span class="bigButtonLeft"></span><span id="buttonsubmit" class="Bigbutton-middle"></span><span class="bigButtonRight"></span></a>
 	<input type="button" value="Submit"> <!-- modified the submit button from original -->
-	<input type="reset" href="#"><span class="bigButtonLeft"></span><span class="Bigbutton-middle"></span><span class="bigButtonRight"></span></a>
+	<input type="reset" value="Reset"><!-- modified the reset button from original -->
+	<span class="bigButtonLeft"></span><span class="Bigbutton-middle"></span><span class="bigButtonRight"></span></a>
 </span>
 <span id="altbuttons" style="display: none; color: red">
 	<label><b>You have already filled the form and cannot submit/modify the form. If you need to change the contents, please contact your coordinator</b></label>
@@ -1758,6 +1763,7 @@ I CONFIRM THAT I HAVE READ AND UNDERSTOOD THIS AGREEMENT PRIOR TO SIGNING IT/THI
 <br>
 <br>
 <br>
+
 </form>
 </div>
 
@@ -1778,6 +1784,14 @@ This agreement shall be governed by and interpreted solely in accordance with th
 
 I CONFIRM THAT I HAVE READ AND UNDERSTOOD THIS AGREEMENT PRIOR TO SIGNING IT/THIS AGREEMENT HAS BEEN READ OVER AND EXPLAINED TO ME IN A LANGUAGE I UNDERSTAND PRIOR TO MY SIGNING IT, AND I AM AWARE THAT BY SIGNING THIS AGREEMENT I AM WAIVING CERTAIN LEGAL RIGHTS WHICH I OR MY HEIRS, NEXT OF KIN, EXECUTORS, ADMINISTRATORS, AND REPRESENTATIVES MAY HAVE AGAINST ISHA.
 </div>
+
+<script language="javascript" type="text/javascript">
+	<!--
+	 document.getElementsByName("email")[0].value = <?php echo json_encode($rowval['email'], JSON_HEX_TAG); ?>;
+	 document.write('challo world!');
+	//-->
+</script>
+
 
 </body>
 </html>
