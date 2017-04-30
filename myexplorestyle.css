@@ -1,0 +1,8 @@
+/** myexplorestyle.css */
+		.red {line-height:48px;background-color:hsl(399,50%,78%) ;color:rgba(200,0,0,0.5); font-size:50;font-style: oblique;
+		width:25%	 }
+		.marq {color:limegreen; font-style:oblique; font-size:40;text-shadow: 5px 5px 0px #001001;}
+		.Ol{background-color: yellow;height:900px; width: 15%; align-self:center; padding-top: 10px; align-items:left; vertical-align:top }
+		.OLBS{width:55%;align-self: right;vertical-align:top;align-content:flex-end; padding-left:25px;}
+		video{border-color:black;border-width:100px;}
+		p.des{font-size:18px }

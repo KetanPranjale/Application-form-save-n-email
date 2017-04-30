@@ -1,9 +1,3 @@
-<!-- <?php
-  $rowval['email'] = 'pranjale.ks@gmail.com';
-	echo "first this";
-?> -->
-
-
 <html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -212,11 +206,12 @@ Application Form - SacredWalks Auto save email version
 
 	</script>
 
-	<script>
+<!--  javascript function to be called on event -->
+	<!-- <script>
 	function adde() {
 		document.getElementsByName("email")[0].value="pranjale.ks@gmail.com";
 	}
-	</script>
+	</script> -->
 
 </head>
 <body>
@@ -224,7 +219,7 @@ Application Form - SacredWalks Auto save email version
 	<!-- content -->
 
 <div style="width: 100%; border: 0px; background-color: transparent">
-	<form id="registerform" action="savenEmail.php" method="post"  onreset="adde()">
+	<form id="registerform" action="savenEmail.php" method="post">
 	<div style="width: 60%; min-width: 840px; margin: 0 auto; border: 1px solid black; background-image: url('/images/home-content-bg.jpg');">
         <div style="height:30px">&nbsp;</div>
 		<h3 style="display: none; width: 600px; margin: 0 auto; color: red">Application form is temporarily out of service. Please check back shortly</h3>
@@ -1247,16 +1242,16 @@ Application Form - SacredWalks Auto save email version
 	<div class="oneline"
 		><div class="boxgood required"
 			><label class="biglabel"><b>a.</b> Blood Group: </label
-			><input type="text" class="inptext flexcol" name="medical.bloodgroup" style="width: 120px"
+			><input type="text" class="inptext flexcol" name="medical_bloodgroup" style="width: 120px"
 		></div
 		><div class="boxgood required"
 			><label class="biglabel">Height: </label
-			><input type="text" class="inptext" name="medical.height" style="width: 120px"
+			><input type="text" class="inptext" name="medical_height" style="width: 120px"
 			><label>&nbsp;cm </label
 		></div
 		><div class="boxgood required"
 			><label class="biglabel">Weight: </label
-			><input type="text" class="inptext" name="medical.weight" style="width: 120px"
+			><input type="text" class="inptext" name="medical_weight" style="width: 120px"
 			><label>&nbsp;Kg </label
 		></div
 	></div>
@@ -1275,368 +1270,368 @@ Application Form - SacredWalks Auto save email version
 	<tr>
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.swelling" value="Swelling">
+				<input type="checkbox" name="medical_swelling" value="Swelling">
 				<label> Swelling of both feet </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.swelling" value="No">
+			<input type="checkbox" name="medical_swelling" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.swelling_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_swelling_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr>
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.transient" value="Transient">
+				<input type="checkbox" name="medical_transient" value="Transient">
 				<label> Transient loss of consciousness on &amp; off </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.transient" value="No">
+			<input type="checkbox" name="medical_transient" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.transient_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_transient_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr>
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.breathing" value="Breathing Difficulty">
+				<input type="checkbox" name="medical_breathingBD" value="Breathing Difficulty">
 				<label> Breathing Difficulty </label>
-				<input type="checkbox" name="medical.breathing" value="Chest Pain on climbing or walking">
+				<input type="checkbox" name="medical_breathingCP" value="Chest Pain on climbing or walking">
 				<label> Chest Pain on climbing stairs / walking on flat surface</label>
-				<input type="checkbox" name="medical.breathing" value="Palpitations">
+				<input type="checkbox" name="medical_breathingP" value="Palpitations">
 				<label> Palpitations </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.breathing" value="No">
+			<input type="checkbox" name="medical_breathing" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.breathing_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_breathing_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr>
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.bp" value="High BP">
+				<input type="checkbox" name="medical_bpH" value="High BP">
 				<label> High BP </label>
-				<input type="checkbox" name="medical.bp" value="Low BP">
+				<input type="checkbox" name="medical_bpL" value="Low BP">
 				<label> Low BP</label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.bp" value="No">
+			<input type="checkbox" name="medical_bp" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.bp_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_bp_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr>
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.diabetes" value="Diabetes">
+				<input type="checkbox" name="medical_diabetesD" value="Diabetes">
 				<label> Diabetes </label>
-				<input type="checkbox" name="medical.diabetes" value="Impaired Glucose Tolerance">
+				<input type="checkbox" name="medical_diabetesI" value="Impaired Glucose Tolerance">
 				<label> Impaired Glucose Tolerance</label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.diabetes" value="No">
+			<input type="checkbox" name="medical_diabetes" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.diabetes_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_diabetes_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr>
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.heart" value="Heart Problems since birth">
+				<input type="checkbox" name="medical_heartB" value="Heart Problems since birth">
 				<label> Heart Problems since birth </label>
-				<input type="checkbox" name="medical.heart" value="Heart Attack">
+				<input type="checkbox" name="medical_heartA" value="Heart Attack">
 				<label> Heart Attack </label>
-				<br><input type="checkbox" name="medical.heart" value="Heart Failure">
+				<br><input type="checkbox" name="medical_heartF" value="Heart Failure">
 				<label> Cardiac Arrest </label>
-				<input type="checkbox" name="medical.heart" value="Heart Operations">
+				<input type="checkbox" name="medical_heartO" value="Heart Operations">
 				<label> Heart Surgery / Angioplasty </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.heart" value="No">
+			<input type="checkbox" name="medical_heart" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.heart_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_heart_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr>
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.asthma" value="Asthma">
+				<input type="checkbox" name="medical_asthmaA" value="Asthma">
 				<label> Asthma </label>
-				<input type="checkbox" name="medical.asthma" value="Bronchitis">
+				<input type="checkbox" name="medical_asthmaB" value="Bronchitis">
 				<label> Bronchitis </label>
-				<input type="checkbox" name="medical.asthma" value="Sinusitis">
+				<input type="checkbox" name="medical_asthmaS" value="Sinusitis">
 				<label> Sinusitis </label>
-				<input type="checkbox" name="medical.asthma" value="Persistent Cough">
+				<input type="checkbox" name="medical_asthmaC" value="Persistent Cough">
 				<label> Persistent Cough </label>
-				<input type="checkbox" name="medical.asthma" value="Tuberculosis">
+				<input type="checkbox" name="medical_asthmaT" value="Tuberculosis">
 				<label> Tuberculosis </label>
-				<input type="checkbox" name="medical.asthma" value="Lung Disorders">
+				<input type="checkbox" name="medical_asthmaL" value="Lung Disorders">
 				<label> Lung Disorders </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.asthma" value="No">
+			<input type="checkbox" name="medical_asthma" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.asthma_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_asthma_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr data-bind="visible: walks.indexOf('KM17') > -1">
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.anemia" value="Anemia">
+				<input type="checkbox" name="medical_anemia" value="Anemia">
 				<label> Anemia </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.anemia" value="No">
+			<input type="checkbox" name="medical_anemia" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.anemia_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_anemia_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr data-bind="visible: walks.indexOf('KM17') > -1">
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.thyroid" value="Thyroid">
+				<input type="checkbox" name="medical_thyroidT" value="Thyroid">
 				<label> Thyroid </label>
-				<input type="checkbox" name="medical.thyroid" value="Endocrine">
+				<input type="checkbox" name="medical_thyroidE" value="Endocrine">
 				<label> Endocrine Disorders </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.thyroid" value="No">
+			<input type="checkbox" name="medical_thyroid" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.thyroid_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_thyroid_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr>
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.stroke" value="Stroke">
+				<input type="checkbox" name="medical_strokeS" value="Stroke">
 				<label> Stroke </label>
-				<input type="checkbox" name="medical.stroke" value="Fits">
+				<input type="checkbox" name="medical_strokeF" value="Fits">
 				<label> Seizures </label>
-				<input type="checkbox" name="medical.stroke" value="Neurological Problems">
+				<input type="checkbox" name="medical_strokeN" value="Neurological Problems">
 				<label> Neurological Problems </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.stroke" value="No">
+			<input type="checkbox" name="medical_stroke" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.stroke_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_stroke_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr data-bind="visible: walks.indexOf('KM17') > -1">
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.migraine" value="Migraine">
+				<input type="checkbox" name="medical_migraineM" value="Migraine">
 				<label> Migraine </label>
-				<input type="checkbox" name="medical.migraine" value="Repeated headache">
+				<input type="checkbox" name="medical_migraineR" value="Repeated headache">
 				<label> Repeated headache </label>
-				<input type="checkbox" name="medical.migraine" value="Dizziness">
+				<input type="checkbox" name="medical_migraineD" value="Dizziness">
 				<label> Dizziness </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.migraine" value="No">
+			<input type="checkbox" name="medical_migraine" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.migraine_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_migraine_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr>
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.mental" value="Depression">
+				<input type="checkbox" name="medical_mentalD" value="Depression">
 				<label> Depression </label>
-				<input type="checkbox" name="medical.mental" value="Anxiety">
+				<input type="checkbox" name="medical_mentalA" value="Anxiety">
 				<label> Anxiety </label>
-				<input type="checkbox" name="medical.mental" value="Mental Disorders">
+				<input type="checkbox" name="medical_mentalD" value="Mental Disorders">
 				<label> Mental Disorders </label>
-				<br><input type="checkbox" name="medical.mental" value="Treated by Psychiatrist">
+				<br><input type="checkbox" name="medical_mentalT" value="Treated by Psychiatrist">
 				<label> Treated by Psychiatrist </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.mental" value="No">
+			<input type="checkbox" name="medical_mental" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.mental_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_mental_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr data-bind="visible: walks.indexOf('KM17') > -1">
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.kidney" value="Kidney Problem">
+				<input type="checkbox" name="medical_kidneyP" value="Kidney Problem">
 				<label> Kidney Problem </label>
-				<input type="checkbox" name="medical.kidney" value="Kidney Failure">
+				<input type="checkbox" name="medical_kidneyF" value="Kidney Failure">
 				<label> Kidney Failure</label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.kidney" value="No">
+			<input type="checkbox" name="medical_kidney" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.kidney_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_kidney_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr data-bind="visible: walks.indexOf('KM17') > -1">
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.ulcer" value="Peptic Ulcer">
+				<input type="checkbox" name="medical_ulcerP" value="Peptic Ulcer">
 				<label> Peptic Ulcer </label>
-				<input type="checkbox" name="medical.ulcer" value="Acidity">
+				<input type="checkbox" name="medical_ulcerA" value="Acidity">
 				<label> Acidity</label>
-				<input type="checkbox" name="medical.ulcer" value="Indigestion">
+				<input type="checkbox" name="medical_ulcerI" value="Indigestion">
 				<label> Indigestion</label>
-				<input type="checkbox" name="medical.ulcer" value="Constipation">
+				<input type="checkbox" name="medical_ulcerC" value="Constipation">
 				<label> Constipation</label>
-				<input type="checkbox" name="medical.ulcer" value="Stomach Problems">
+				<input type="checkbox" name="medical_ulcerS" value="Stomach Problems">
 				<label> Stomach Problems</label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.ulcer" value="No">
+			<input type="checkbox" name="medical_ulcer" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.ulcer_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_ulcer_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr data-bind="visible: walks.indexOf('KM17') > -1">
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
 				<label> Sudden  </label>
-				<input type="checkbox" name="medical.weightloss" value="Sudden Gain">
+				<input type="checkbox" name="medical_weightlossG" value="Sudden Gain">
 				<label> weight gain </label>
-				<input type="checkbox" name="medical.weightloss" value="Sudden Loss">
+				<input type="checkbox" name="medical_weightlossL" value="Sudden Loss">
 				<label> weight loss</label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.weightloss" value="No">
+			<input type="checkbox" name="medical_weightloss" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.weightloss_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_weightloss_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr data-bind="visible: walks.indexOf('KM17') > -1">
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.ent" value="Ear">
+				<input type="checkbox" name="medical_entE" value="Ear">
 				<label> Ear </label>
-				<input type="checkbox" name="medical.ent" value="Nose">
+				<input type="checkbox" name="medical_entN" value="Nose">
 				<label> Nose </label>
-				<input type="checkbox" name="medical.ent" value="Throat problems">
+				<input type="checkbox" name="medical_entT" value="Throat problems">
 				<label> Throat problems </label>
-				<input type="checkbox" name="medical.ent" value="Allergy">
+				<input type="checkbox" name="medical_entA" value="Allergy">
 				<label> Allergy </label>
-				<br><input type="checkbox" name="medical.ent" value="Dental caries">
+				<br><input type="checkbox" name="medical_entD" value="Dental caries">
 				<label> Dental caries / Cavities </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.ent" value="No">
+			<input type="checkbox" name="medical_ent" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.ent_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_ent_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr data-bind="visible: walks.indexOf('KM17') > -1">
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.sleep" value="Sleep apnea">
+				<input type="checkbox" name="medical_sleepA" value="Sleep apnea">
 				<label> Sleep apnea </label>
-				<input type="checkbox" name="medical.sleep" value="Snoring">
+				<input type="checkbox" name="medical_sleepS" value="Snoring">
 				<label> Snoring </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.sleep" value="No">
+			<input type="checkbox" name="medical_sleep" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.sleep_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_sleep_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr data-bind="visible: walks.indexOf('KM17') > -1">
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.eye" value="Increased Eye Pressure">
+				<input type="checkbox" name="medical_eyeI" value="Increased Eye Pressure">
 				<label> Increased Eye Pressure </label>
-				<input type="checkbox" name="medical.eye" value="Vision/Eye Problem">
+				<input type="checkbox" name="medical_eyeV" value="Vision/Eye Problem">
 				<label> Vision/Eye Problem </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.eye" value="No">
+			<input type="checkbox" name="medical_eye" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.eye_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_eye_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr>
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.joint" value="Varicose vein">
+				<input type="checkbox" name="medical_jointV" value="Varicose vein">
 				<label> Varicose vein </label>
-				<input type="checkbox" name="medical.joint" value="Back pain">
+				<input type="checkbox" name="medical_jointB" value="Back pain">
 				<label> Back pain </label>
-				<input type="checkbox" name="medical.joint" value="Arthritis">
+				<input type="checkbox" name="medical_jointA" value="Arthritis">
 				<label> Arthritis </label>
-				<input type="checkbox" name="medical.joint" value="Joint mobility problem">
+				<input type="checkbox" name="medical_jointM" value="Joint mobility problem">
 				<label> Joint mobility problem </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.joint" value="No">
+			<input type="checkbox" name="medical_joint" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.joint_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_joint_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr data-bind="visible: walks.indexOf('KM17') > -1">
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
 				<label> Allergies: </label>
-				<input type="checkbox" name="medical.allergy" value="Sulpha">
+				<input type="checkbox" name="medical_allergyS" value="Sulpha">
 				<label> Sulpha </label>
-				<input type="checkbox" name="medical.allergy" value="any drug">
+				<input type="checkbox" name="medical_allergyD" value="any drug">
 				<label> any drug </label>
-				<input type="checkbox" name="medical.allergy" value="Food">
+				<input type="checkbox" name="medical_allergyF" value="Food">
 				<label> Food </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.allergy" value="No">
+			<input type="checkbox" name="medical_allergy" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.allergy_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_allergy_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr data-bind="visible: walks.indexOf('KM17') > -1">
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.surgery" value="Surgery">
+				<input type="checkbox" name="medical_surgeryS" value="Surgery">
 				<label> Surgery </label>
-				<input type="checkbox" name="medical.surgery" value="Significant Injuries">
+				<input type="checkbox" name="medical_surgeryI" value="Significant Injuries">
 				<label> Significant Injuries </label>
-				<input type="checkbox" name="medical.surgery" value="Hospitilization">
+				<input type="checkbox" name="medical_surgeryH" value="Hospitilization">
 				<label> Hospitilization </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.surgery" value="No">
+			<input type="checkbox" name="medical_surgery" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.surgery_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_surgery_details" style="width:220px"></textarea></div></td>
 	</tr>
 	<tr>
 		<td width="50%" style="padding-top: 10px; padding-bottom: 10px" class="medicaltd">
 			<div class="boxgood required">
-				<input type="checkbox" name="medical.deformity" value="Physical Deformity">
+				<input type="checkbox" name="medical_deformity" value="Physical Deformity">
 				<label> Any Physical Deformity </label>
 			</div>
 		</td>
 		<td width="10%">
-			<input type="checkbox" name="medical.deformity" value="No">
+			<input type="checkbox" name="medical_deformity" value="No">
 			<label> No </label>
 		</td>
-		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical.deformity_details" style="width:220px"></textarea></div></td>
+		<td class="medicaltd"><div class="boxgood" style="display: block"><textarea class="mtdetails" name="medical_deformity_details" style="width:220px"></textarea></div></td>
 	</tr>
 	</table>
 
@@ -1646,7 +1641,7 @@ Application Form - SacredWalks Auto save email version
 	></div>
 	<div class="oneline"
 		><div class="boxgood required" style="display: block"
-			><textarea name="medical.others" rows="3" style="margin-left: 0px; width: 99%"></textarea
+			><textarea name="medical_others" rows="3" style="margin-left: 0px; width: 99%"></textarea
 		></div
 	></div>
 	<div class="oneline"
@@ -1654,21 +1649,21 @@ Application Form - SacredWalks Auto save email version
 	></div>
 	<div class="oneline"
 		><div class="boxgood required" style="display: block"
-			><textarea name="medical.medications" rows="6" style="margin-left: 0px; width: 99%"></textarea
+			><textarea name="medical_medications" rows="6" style="margin-left: 0px; width: 99%"></textarea
 		></div
 	></div>
 	<div class="oneline">
 		<label class="biglabel" ><b>e.</b> Do you smoke; consume Alcohol / Tobacco products / Addictive Drugs or Narcotics such as cocaine, heroin, etc on a
 			regular basis? </label>
 			<div class="boxgood required">
-				<input type="radio" name="medical.drugs" value="Yes"> <label>Yes / </label>
-				<input type="radio" name="medical.drugs" value="No"> <label>No</label>
+				<input type="radio" name="medical_drugs" value="Yes"> <label>Yes / </label>
+				<input type="radio" name="medical_drugs" value="No"> <label>No</label>
 				<label>&nbsp;&nbsp;&nbsp;(If 'Yes', please Give details): </label>
 			</div>
 	</div>
 	<div class="oneline"
 		><div class="boxgood required" style="display: block"
-			><textarea name="medical.alcoholdrugs" rows="3" style="margin-left: 0px; width: 99%"></textarea
+			><textarea name="medical_alcoholdrugs" rows="3" style="margin-left: 0px; width: 99%"></textarea
 		></div
 	></div>
 	<div class="oneline" data-bind="visible: walks.indexOf('KM17') > -1"
@@ -1677,7 +1672,7 @@ Application Form - SacredWalks Auto save email version
 	></div>
 	<div class="oneline" data-bind="visible: walks.indexOf('KM17') > -1"
 		><div class="boxgood" style="display: block"
-			><textarea name="medical.altitude" rows="3" style="margin-left: 0px; width: 99%"></textarea
+			><textarea name="medical_altitude" rows="3" style="margin-left: 0px; width: 99%"></textarea
 		></div
 	></div>
 
@@ -1786,12 +1781,31 @@ I CONFIRM THAT I HAVE READ AND UNDERSTOOD THIS AGREEMENT PRIOR TO SIGNING IT/THI
 </div>
 
 <script language="javascript" type="text/javascript">
-	<!--
-	 document.getElementsByName("email")[0].value = <?php echo json_encode($rowval['email'], JSON_HEX_TAG); ?>;
-	 document.write('challo world!');
-	//-->
+	// document.getElementsByName("email")[0].value = <?php echo json_encode($rowval['email'], JSON_HEX_TAG);?>;
+	var perdetail = new Array(); // var perdetail = [];
+	perdetail =  <?php echo json_encode($rowval, JSON_HEX_TAG);?>; //Getting persons details from mongodb DB using php and assigning it to JS variable to input in html elements
+	if(perdetail!=null){ //if page if fresh, there is no application data stored in dB
+				for (variable in perdetail){										
+					// if(variable !='_id') //
+					if(document.getElementsByName(variable).length !=0){ //check if the element exists in form
+						if (document.getElementsByName(variable)[0].type=='checkbox') {//if element is checkbox if yes then traverse to form checkbox element as we have in database 
+							for (i=0;document.getElementsByName(variable)[i] !=null;i++) {
+								if(document.getElementsByName(variable)[i].value==perdetail[variable]) {//verify element is same as we have in dB
+									document.getElementsByName(variable)[i].checked=true;
+								}
+							}
+						}
+						else {//form elements other than checkbox
+							document.getElementsByName(variable)[0].value=perdetail[variable];
+						}
+						//document.write(perdetail[variable]);
+					}
+				}
+				// document.getElementsByName("email")[0].value = perdetail["email"];
+				// document.write('challo world!'); // Check point if html is getting processed till this line
+		}
+		//document.write('<br>challo world!'); // Check point if html is getting processed till this line	
 </script>
-
 
 </body>
 </html>

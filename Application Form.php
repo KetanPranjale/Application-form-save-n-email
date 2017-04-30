@@ -241,8 +241,8 @@ Application Form - SacredWalks Auto save email version
 	  a.button:hover { color:#F3A536; }
 	  a.button span { display:block; float:left; height:38px; border:none; }
  		white-space:nowrap; font-family: 'Georgia', 'Times New Roman'; font-size: 16px; }
-	  .bigButtonMiddle:hover { color:#F3A536 }
-	</style>
+	  .bigButtonMiddle:hover { color:#F3A536; }
+	<img src="clouds.gif" alt="" /></style>
 
 
 
