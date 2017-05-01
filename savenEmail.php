@@ -82,6 +82,8 @@ if($client->close()){
 
 // header("Location:Application Form v1.1.php"); // after processing data, redirect to new Application form
 //header("location:Application Form v1.1.php"); // sent to blank application form
-// header("location:javascript://history.go(-1)"); // after processing data, redirect to Same Application form
+//newt_delay(1);
+sleep(3);
+header("location:javascript://history.go(-1)"); // after processing data, redirect to Same Application form
 // exit;
 ?>

@@ -15,6 +15,6 @@ $db = $client->selectDB('AppForms');
 $coll = $db->partdatacoll;
 $rowval= $coll->findOne(array('email'=>$emailID));
   // $rowval['email'] = 'manenamane@gmail.com';
-  include 'Application Form v1.1.php';
+  include 'index.php';
   // echo "<url>http://localhost/Application%20Form.php</url>";
 ?>
