@@ -1,4 +1,4 @@
-<?php
+s<?php
 /** Modifying the html file code
 $html=new DOMDocument();
 $html->loadHTMLFile('Application Form v1.1.php');
@@ -11,8 +11,8 @@ $emailID=$_GET[email];
 
 /** // Fetching data from database as per the email */
 $client = new MongoClient();
-$db = $client->selectDB('AppForms');
-$coll = $db->partdatacoll;
+$db = $client->selectDB('appforms');
+$coll = $db->partdata;
 $rowval= $coll->findOne(array('email'=>$emailID));
   // $rowval['email'] = 'manenamane@gmail.com';
   include 'index.php';

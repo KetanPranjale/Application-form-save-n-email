@@ -20,9 +20,13 @@ echo "<title>Writing database</title>";
 */
 
 // // Saving data from Application form into mongodb dataBase starts
-$client = new MongoClient();
-$db = $client->selectDB('AppForms');
-$coll = $db->partdatacoll; // $coll = $client->AppForms->partdatacoll; alternate way to select collection
+// $uri = "mongodb://ketan:kspran@ds137801.mlab.com:37801/appforms";
+// $options = array("connectTimeoutMS" => 30000, "replicaSet" => "replicaSetName");
+
+$uri="mongodb://ketan:kspran@ds137801.mlab.com:37801/appforms";
+$client = new MongoClient($uri);
+$coll=$client->appforms->partdata;
+// $coll = $client->AppForms->partdatacoll; alternate way to select collection
 // $coll->insert( [ 'name' => $_POST['name'], 'email' => $_POST['email'] ] );
 
 // Specify unique key for collection in database commnadis : db.partdatacoll.createIndex({email:1},{unique:true})
@@ -41,11 +45,11 @@ if(!empty($_POST)){ //To Check if no data has been submitted
 } 
 
 // echo '<br> equivalent post',$eqvPost;
-	if($coll->findOne(array('email'=>$eqvPost['email']))) {
+	if($coll->findOne(array('email'=>$eqvPost['email']))) { // Updating database if email exist in database (old entry)
 		$coll->update(array('email'=>$eqvPost['email']),array('$set'=>$eqvPost));
 		echo "<h3>Updated dataBase</h3>";
 	}
-	else {
+	else { // if its new entry add new document to mongod collection
 		$coll->insert($eqvPost); // adding the equivalent post array with key->value pair to the collection in database
 		echo "<h3>Added to dataBase</h3>";
 	}
@@ -83,7 +87,7 @@ if($client->close()){
 // header("Location:Application Form v1.1.php"); // after processing data, redirect to new Application form
 //header("location:Application Form v1.1.php"); // sent to blank application form
 //newt_delay(1);
-sleep(3);
-header("location:javascript://history.go(-1)"); // after processing data, redirect to Same Application form
+// sleep(3);
+// header("location:javascript://history.go(-1)"); // after processing data, redirect to Same Application form
 // exit;
 ?>
